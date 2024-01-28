@@ -1,4 +1,4 @@
-package engineer.test.inshur.weatherservice.openweather;
+package engineer.test.inshur.weatherservice.infrastructure.openweather;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;

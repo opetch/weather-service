@@ -13,6 +13,7 @@ targets running tests will require this, although it would be ideal to not requi
 ### Areas for improvement within the tackled scope
 
 * test coverage of controller is missing, WIP can be seen commented out.
+* would be better to segregate application, domain & infrastructure via classpath with maven modules
 * some extra bits part-modelled, but not implemented i.e. support for temperature other than Kelvin
 * handling of nullable values, in many cases Optional.get has been called without checking
 * should have more test cases within ForecastTest to check for edge cases

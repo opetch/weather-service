@@ -1,8 +1,8 @@
-package engineer.test.inshur.weatherservice.openweather;
+package engineer.test.inshur.weatherservice.infrastructure.openweather;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import engineer.test.inshur.weatherservice.WeatherClient;
-import engineer.test.inshur.weatherservice.domain.GeoCoordinate;
+import engineer.test.inshur.weatherservice.domain.ports.spi.ForecastRetrievalPort;
+import engineer.test.inshur.weatherservice.domain.model.GeoCoordinate;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -23,7 +23,7 @@ public class OpenWeatherClientIntegrationTest {
 
     @Test
     public void ensureWeCanMarshallValuesFromTheOpenWeatherForecastService() {
-        WeatherClient client = new OpenWeatherClient(apiKey, baseUri, restTemplateBuilder.build());
+        ForecastRetrievalPort client = new OpenWeatherClient(apiKey, baseUri, restTemplateBuilder.build());
         var londonBridge = new GeoCoordinate(51.507879, -0.087732);
         var forecast = client.retrieveWeatherForecast(londonBridge);
         int periodCount = forecast.getDays()

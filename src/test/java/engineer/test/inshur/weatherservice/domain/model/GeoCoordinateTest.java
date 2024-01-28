@@ -1,5 +1,6 @@
 package engineer.test.inshur.weatherservice.domain;
 
+import engineer.test.inshur.weatherservice.domain.model.GeoCoordinate;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

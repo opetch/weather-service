@@ -1,5 +1,8 @@
-package engineer.test.inshur.weatherservice.domain;
+package engineer.test.inshur.weatherservice.domain.model;
 
+import engineer.test.inshur.weatherservice.domain.model.Day;
+import engineer.test.inshur.weatherservice.domain.model.Forecast;
+import engineer.test.inshur.weatherservice.domain.model.Period;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
@@ -7,7 +10,7 @@ import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
-import static engineer.test.inshur.weatherservice.domain.Temperature.kelvin;
+import static engineer.test.inshur.weatherservice.domain.model.Temperature.kelvin;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class ForecastTest {

@@ -1,13 +1,13 @@
-package engineer.test.inshur.weatherservice.openweather;
+package engineer.test.inshur.weatherservice.infrastructure.openweather;
 
-import engineer.test.inshur.weatherservice.WeatherClient;
-import engineer.test.inshur.weatherservice.domain.Forecast;
-import engineer.test.inshur.weatherservice.domain.GeoCoordinate;
-import engineer.test.inshur.weatherservice.domain.Period;
-import engineer.test.inshur.weatherservice.domain.Temperature;
+import engineer.test.inshur.weatherservice.domain.ports.spi.ForecastRetrievalPort;
+import engineer.test.inshur.weatherservice.domain.model.Forecast;
+import engineer.test.inshur.weatherservice.domain.model.GeoCoordinate;
+import engineer.test.inshur.weatherservice.domain.model.Period;
+import engineer.test.inshur.weatherservice.domain.model.Temperature;
 import org.springframework.web.client.RestTemplate;
 
-public class OpenWeatherClient implements WeatherClient {
+public class OpenWeatherClient implements ForecastRetrievalPort {
 
     private final String apiKey;
 

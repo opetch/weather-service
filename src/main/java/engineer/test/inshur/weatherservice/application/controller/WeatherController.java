@@ -1,9 +1,9 @@
-package engineer.test.inshur.weatherservice.controller;
+package engineer.test.inshur.weatherservice.application.controller;
 
-import engineer.test.inshur.weatherservice.WeatherService;
-import engineer.test.inshur.weatherservice.domain.Day;
-import engineer.test.inshur.weatherservice.domain.Forecast;
-import engineer.test.inshur.weatherservice.domain.GeoCoordinate;
+import engineer.test.inshur.weatherservice.domain.service.WeatherService;
+import engineer.test.inshur.weatherservice.domain.model.Day;
+import engineer.test.inshur.weatherservice.domain.model.Forecast;
+import engineer.test.inshur.weatherservice.domain.model.GeoCoordinate;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;

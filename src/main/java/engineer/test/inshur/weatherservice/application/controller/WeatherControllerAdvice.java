@@ -1,4 +1,4 @@
-package engineer.test.inshur.weatherservice.controller;
+package engineer.test.inshur.weatherservice.application.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;

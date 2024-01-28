@@ -1,4 +1,4 @@
-package engineer.test.inshur.weatherservice.domain;
+package engineer.test.inshur.weatherservice.domain.model;
 
 import java.time.LocalDate;
 import java.util.*;
