@@ -37,7 +37,7 @@ public class OpenWeatherClient implements WeatherClient {
     private static Period stepToPeriod(ForecastResponse.Step step) {
         return new Period(
                 step.date_time.toLocalTime(),
-                new Temperature(Temperature.Unit.KELVIN, step.main.temp_max),
+                new Temperature(Temperature.Unit.KELVIN, step.main.temp_min),
                 new Temperature(Temperature.Unit.KELVIN, step.main.temp_max),
                 step.main.humidity);
     }

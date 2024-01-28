@@ -16,14 +16,25 @@ public class Forecast {
         return days;
     }
 
+    public Optional<Day> hottestDay() {
+        final Comparator<Day> tempComparator = Comparator.comparingDouble(day -> day.maximumTemperature().get().getDegrees());
+        final Comparator<Day> reverseHumidityComparator = Comparator.comparingDouble(day -> -day.humidity().getAsDouble());
+
+        return days.stream()
+                .filter(d -> d.maximumTemperature().isPresent())
+                .filter(d -> d.humidity().isPresent())
+                .max(tempComparator.thenComparing(reverseHumidityComparator));
+    }
+
     public static class Builder {
         private final Map<LocalDate, List<Period>> periods = new HashMap<>();
-        public void add(LocalDate date, Period period) {
+        public Builder add(LocalDate date, Period period) {
             if (periods.containsKey(date)) {
                 periods.get(date).add(period);
             } else {
                 periods.put(date, newEntry(period));
             }
+            return this;
         }
 
         public Forecast build() {
